@@ -34,7 +34,7 @@ export default class Weather {
     }
   }
 
-  static displayCurrent() {
+  static getCurrent() {
     const { current } = this;
     const chanceOfRain = this.weekForecast[0].day.daily_chance_of_rain;
 
@@ -49,7 +49,7 @@ export default class Weather {
     ];
   }
 
-  static displayForecast(i) {
+  static getForecast(i) {
     const day = this.weekForecast[i];
 
     return [
