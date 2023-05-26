@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/f5ed9082ee.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="icon" href="./assets/icon.ico" />
     <title>Sunny Side App</title>
   </head>
@@ -26,10 +30,37 @@
           <p id="country"></p>
         </div>
         <div class="right">
-          <p>Feels like: <span id="feels-like"></span></p>
-          <p>Chance of rain: <span id="chance-of-rain"></span></p>
-          <p>Humidity: <span id="humidity"></span></p>
-          <p>Wind speed: <span id="wind"></span></p>
+          <div class="container">
+            <i class="fa-solid fa-temperature-high"></i>
+            <div class="container-details">
+              <p>Feels like</p>
+              <span id="feels-like"></span>
+            </div>
+          </div>
+
+          <div class="container">
+            <i class="fa-solid fa-cloud-rain"></i>
+            <div class="container-details">
+              <p>Chance of rain</p>
+              <span id="chance-of-rain"></span>
+            </div>
+          </div>
+
+          <div class="container">
+            <i class="fa-solid fa-water"></i>
+            <div class="container-details">
+              <p>Humidity</p>
+              <span id="humidity"></span>
+            </div>
+          </div>
+
+          <div class="container">
+            <i class="fa-solid fa-wind"></i>
+            <div class="container-details">
+              <p>Wind speed</p>
+              <span id="wind"></span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
