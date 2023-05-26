@@ -8,12 +8,6 @@ export default class Weather {
 
   static country;
 
-  static currentCondition;
-
-  static tempC;
-
-  static windKph;
-
   static time;
 
   static weekForecast;
@@ -45,6 +39,7 @@ export default class Weather {
     const chanceOfRain = this.weekForecast[0].day.daily_chance_of_rain;
 
     return [
+      current.condition.icon,
       current.condition.text,
       Math.round(current.temp_c),
       Math.round(current.feelslike_c),
@@ -58,6 +53,7 @@ export default class Weather {
     const day = this.weekForecast[i];
 
     return [
+      day.day.condition.icon,
       format(new Date(day.date), 'eee'),
       day.day.condition.text,
       Math.round(day.day.daily_chance_of_rain),
