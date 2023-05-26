@@ -54,6 +54,7 @@ export default class DisplayController {
 
   static displayForecast() {
     const forecastContainer = document.querySelector('.week-forecast');
+    forecastContainer.textContent = '';
 
     for (let i = 1; i < 8; i++) {
       const [dataDayIcon, dataDayName, dataMaxTemp, dataMinTemp] = Weather.getForecast(i);
