@@ -1,4 +1,6 @@
 /* eslint-disable no-alert */
+import format from 'date-fns/format';
+
 export default class Weather {
   static city;
 
@@ -30,7 +32,7 @@ export default class Weather {
       this.city = await data.location.name;
       this.region = await data.location.region;
       this.country = await data.location.country;
-      this.time = await data.location.localtime;
+      this.time = await format(new Date(data.location.localtime), 'eeee, do MMM \'\'yy, h:mm aaa');
       this.current = await data.current;
       this.weekForecast = await data.forecast.forecastday;
     } else {
@@ -56,7 +58,7 @@ export default class Weather {
     const day = this.weekForecast[i];
 
     return [
-      day.date,
+      format(new Date(day.date), 'eee'),
       day.day.condition.text,
       Math.round(day.day.daily_chance_of_rain),
       Math.round(day.day.mintemp_c),

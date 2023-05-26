@@ -12,6 +12,8 @@ export default class DisplayController {
           console.log(Weather.displayCurrent());
           //   console.log(Weather.displayForecast());
           console.log(Weather.displayForecast(2));
+          console.log(Weather.time);
+          // console.log(Weather.formatToday(Weather.time));
           input.value = '';
         } catch (err) {
           console.error(err);
