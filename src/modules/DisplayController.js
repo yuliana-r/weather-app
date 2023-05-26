@@ -1,9 +1,10 @@
+/* eslint-disable no-alert */
 import Weather from './Data';
 
 export default class DisplayController {
-  static async getData() {
+  static getData() {
     const input = document.getElementById('input');
-    input.addEventListener('keypress', async (e) => {
+    input.addEventListener('keypress', (e) => {
       if (e.key === 'Enter') {
         e.preventDefault();
         const city = input.value.trim();
@@ -13,19 +14,6 @@ export default class DisplayController {
           .catch((err) => {
             alert(err);
           });
-
-        // try {
-        //   await Weather.getData(city);
-        //   DisplayController.displayCurrentWeather();
-        //   DisplayController.displayForecast();
-
-        //   console.log(Weather.getForecast(2));
-        //   console.log(Weather.time);
-        //   input.value = '';
-        // } catch (err) {
-        //   console.error(err);
-        // }
-
         input.value = '';
       }
     });
@@ -65,6 +53,35 @@ export default class DisplayController {
   }
 
   static displayForecast() {
+    const forecastContainer = document.querySelector('.week-forecast');
 
+    for (let i = 1; i < 8; i++) {
+      const [dataDayIcon, dataDayName, dataMaxTemp, dataMinTemp] = Weather.getForecast(i);
+      const dayContainer = document.createElement('div');
+      dayContainer.classList.add('day');
+
+      const dayIcon = document.createElement('img');
+      dayIcon.classList.add('day-icon');
+      dayIcon.src = dataDayIcon;
+
+      const dayName = document.createElement('p');
+      dayName.classList.add('day-name');
+      dayName.textContent = dataDayName;
+
+      const maxTemp = document.createElement('p');
+      maxTemp.classList.add('max-temp');
+      maxTemp.textContent = `${dataMaxTemp} °C`;
+
+      const minTemp = document.createElement('p');
+      minTemp.classList.add('min-temp');
+      minTemp.textContent = `${dataMinTemp} °C`;
+
+      dayContainer.appendChild(dayIcon);
+      dayContainer.appendChild(dayName);
+      dayContainer.appendChild(maxTemp);
+      dayContainer.appendChild(minTemp);
+
+      forecastContainer.appendChild(dayContainer);
+    }
   }
 }

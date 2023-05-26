@@ -43,8 +43,8 @@ export default class Weather {
       current.condition.text,
       Math.round(current.temp_c),
       Math.round(current.feelslike_c),
-      Math.round(chanceOfRain), // %
-      Math.round(current.humidity), // %
+      Math.round(chanceOfRain),
+      Math.round(current.humidity),
       current.wind_kph,
     ];
   }
@@ -55,10 +55,8 @@ export default class Weather {
     return [
       day.day.condition.icon,
       format(new Date(day.date), 'eee'),
-      day.day.condition.text,
-      Math.round(day.day.daily_chance_of_rain),
-      Math.round(day.day.mintemp_c),
       Math.round(day.day.maxtemp_c),
+      Math.round(day.day.mintemp_c),
     ];
   }
 }

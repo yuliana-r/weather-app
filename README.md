@@ -3,7 +3,7 @@
 
 ## Preview
 
-<!-- [![Weather App](./src/assets/demo.png)](https://yuliana-r.github.io/weather-app/) -->
+[![Weather App](./src/assets/demo.png)](https://yuliana-r.github.io/weather-app/)
 
 ## Media & assets credits:
 
