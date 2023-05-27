@@ -82,7 +82,7 @@ button {
 
 .current-weather {
     min-width: 390px;
-    width: 45%;
+    width: 40%;
     min-height: 300px;
     background-color: rgba(0, 0, 0, 0.25);
     border-radius: 5px;
@@ -185,16 +185,17 @@ i {
 .week-forecast {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.45);
-    width: 80%;
+    width: 65%;
     flex-wrap: wrap;
     border-radius: 5px;
     padding: 20px;
     user-select: none;
     font-family: 'Raleway', 'Roboto', sans-serif;
     color: #fff;
+    gap: 2em;
 }
 
 .day {
@@ -267,12 +268,42 @@ footer {
         flex-direction: column;
         justify-content: center;
         gap: 1em;
+        padding: 0.5em;
     }
 
     .day {
         flex-direction: row;
+        align-items: center;
         justify-content: space-between;
-        gap: 1em;
         width: 300px;
+    }
+
+    .day-name {
+        width: 50px;
+        margin-left: 0;
+    }
+
+    .max-temp {
+        width: 65px;
+    }
+
+    .min-temp {
+        width: 40px;
+    }
+
+    .max-temp,
+    .min-temp {
+        margin-right: 0;
+        text-align: right;
+    }
+
+    #time {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .day {
+        flex: 20%;
     }
 }
