@@ -30,7 +30,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2em;
+    padding: 2em 2em 0;
     user-select: none;
 }
 
@@ -89,7 +89,7 @@ button {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 1em;
+    gap: 2em;
     font-family: 'Raleway', 'Roboto', sans-serif;
     color: #fff;
     padding: 2em 3.5em;
@@ -305,5 +305,9 @@ footer {
 @media (max-width: 1100px) {
     .day {
         flex: 20%;
+    }
+
+    .current-weather {
+        width: 70%;
     }
 }
