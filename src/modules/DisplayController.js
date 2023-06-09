@@ -1,3 +1,5 @@
+/* eslint-disable global-require */
+/* eslint-disable import/no-dynamic-require */
 /* eslint-disable no-alert */
 import Weather from './Data';
 
@@ -27,7 +29,6 @@ export default class DisplayController {
     const speedUnit = 'km/h';
     const time = document.getElementById('time');
     const city = document.getElementById('city');
-    const region = document.getElementById('region');
     const country = document.getElementById('country');
     const icon = document.getElementById('icon');
     const condition = document.getElementById('condition');
@@ -38,14 +39,14 @@ export default class DisplayController {
     const humidity = document.getElementById('humidity');
     const wind = document.getElementById('wind');
 
-    time.textContent = Weather.time;
+    const img = require(`../assets/icons/${dataIcon}.png`);
+
+    time.textContent = `Last updated: \n${Weather.time}`;
     city.textContent = Weather.city;
-    region.textContent = Weather.region;
     country.textContent = Weather.country;
-    icon.src = dataIcon;
+    icon.src = img;
     condition.textContent = dataCondition;
     temp.textContent = `${dataTemp} ${tempUnit}`;
-
     feelsLike.textContent = `${dataFeelsLike} ${tempUnit}`;
     chanceRain.textContent = `${dataChanceRain}%`;
     humidity.textContent = `${dataHumidity}%`;
@@ -63,7 +64,8 @@ export default class DisplayController {
 
       const dayIcon = document.createElement('img');
       dayIcon.classList.add('day-icon');
-      dayIcon.src = dataDayIcon;
+      const img = require(`../assets/icons/${dataDayIcon}.png`);
+      dayIcon.src = img;
 
       const dayName = document.createElement('p');
       dayName.classList.add('day-name');
