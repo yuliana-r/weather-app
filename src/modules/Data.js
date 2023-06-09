@@ -15,7 +15,7 @@ export default class Weather {
   static async getData(city) {
     const apiKey = 'MLRZJ663MCNFCJ4UZHHPBGXWK';
     const response = await fetch(
-      `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}/next7days?unitGroup=metric&include=days%2Ccurrent&key=${apiKey}&contentType=json`,
+      `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}/next7days?unitGroup=metric&include=days%2Ccurrent&iconSet=icons2&key=${apiKey}&contentType=json`,
       { mode: 'cors' },
     );
 
