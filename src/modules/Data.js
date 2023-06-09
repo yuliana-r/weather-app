@@ -35,13 +35,14 @@ export default class Weather {
 
   static getCurrent() {
     const { current } = this;
+    const { weekForecast } = this;
 
     return [
       current.icon,
       current.conditions,
       Math.round(current.temp),
       Math.round(current.feelslike),
-      Math.round(current.precipprob),
+      Math.round(weekForecast[0].precipprob),
       Math.round(current.humidity),
       current.windspeed,
     ];
