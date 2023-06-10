@@ -14,3 +14,5 @@ The project primarily demonstrates use of asynchronous JS with APIs, including t
 1. Flaticon (iconixar): https://www.flaticon.com/free-icons/sun
 
 2. WallpaperAccess: https://wallpaperaccess.com/minimalist-mountain
+
+3. Weather icons: https://www.weatherapi.com/docs/
