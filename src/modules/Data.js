@@ -23,8 +23,8 @@ export default class Weather {
 
     if (response.ok) {
       const split = await data.resolvedAddress.indexOf(',');
-      this.city = await data.resolvedAddress.slice(0, split);
-      this.country = await data.resolvedAddress.slice(split + 2);
+      this.city = await data.resolvedAddress.includes(',') ? data.resolvedAddress.slice(0, split) : data.resolvedAddress;
+      this.country = await data.resolvedAddress.slice(split + 1).trim();
       this.time = await format(new Date(`${data.days[0].datetime} ${data.currentConditions.datetime}`), 'eeee, do MMM \'\'yy, h:mm aaa');
       this.current = await data.currentConditions;
       this.weekForecast = await data.days;

@@ -41,7 +41,7 @@ export default class DisplayController {
 
     const img = require(`../assets/icons/${dataIcon}.png`);
 
-    time.innerHTML = `Last updated: <br>${Weather.time}`;
+    time.innerHTML = `Last updated: <br>${Weather.time} (local)`;
     city.textContent = Weather.city;
     country.textContent = Weather.country;
     icon.src = img;

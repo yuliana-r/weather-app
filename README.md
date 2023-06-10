@@ -11,7 +11,7 @@ The project primarily demonstrates use of asynchronous JS with APIs, including t
 
 ## Media & assets credits:
 
-1. Flaticon (iconixar): https://www.flaticon.com/free-icons/sun
+1. Flaticon (Icon Place): https://www.flaticon.com/free-icons/sun
 
 2. WallpaperAccess: https://wallpaperaccess.com/minimalist-mountain
 
