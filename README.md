@@ -15,4 +15,4 @@ The project primarily demonstrates use of asynchronous JS with APIs, including t
 
 2. WallpaperAccess: https://wallpaperaccess.com/minimalist-mountain
 
-3. Weather icons: https://www.weatherapi.com/docs/
+3. Weather icons: https://www.weatherapi.com/docs/ https://github.com/MaoShizhong/weather-app-TOP/tree/main/src/images/weather-icons 
