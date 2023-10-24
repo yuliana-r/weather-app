@@ -3,7 +3,7 @@
 
 This project is an app that displays current weather and weekly forecast for any location in the world. It is built using the standard front-end stack of HTML, CSS, and JavaScript.
 
-The project primarily demonstrates use of asynchronous JS with APIs, including the Fetch API, promises, and async/await syntax, as well as Webpack as module bundler and external libraries.
+The project primarily demonstrates use of asynchronous JS with APIs, including the Fetch API, promises, and async/await syntax, as well as Webpack as module bundler and external libraries (date-fns and dotenv-webpack).
 
 ## Preview
 
