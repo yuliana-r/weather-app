@@ -4,7 +4,7 @@ import Weather from './modules/Data';
 import './styles/style.css';
 
 window.onload = () => {
-  Weather.getData('London')
+  Weather.getData('London,UK')
     .then(DisplayController.displayCurrentWeather)
     .then(DisplayController.displayForecast)
     .catch((err) => {
